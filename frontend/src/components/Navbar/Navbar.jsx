@@ -1,7 +1,14 @@
+import { images } from "../../constants";
 import "./Navbar.scss";
 
 const Navbar = () => {
-  return <div>Navbar</div>;
+  return (
+    <nav>
+      <div>
+        <img src={images.logo} />
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;
