@@ -21,22 +21,24 @@ const Navbar = () => {
         ))}
       </ul>
 
+      {/* Mobile Responsive NavBar */}
       <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
-
         {toggle && (
           <motion.div
             whileInView={{ x: [300, 0] }}
             transition={{ duration: 0.85, easing: "easeout" }}
           >
             <HiX onClick={() => setToggle(false)} />
-            {["home", "about", "work", "skills", "contact"].map((item) => (
-              <li key={item}>
-                <a href={`#${item}`} onClick={() => setToggle(false)}>
-                  {item}
-                </a>
-              </li>
-            ))}
+            <ul>
+              {["home", "about", "work", "skills", "contact"].map((item) => (
+                <li key={item}>
+                  <a href={`#${item}`} onClick={() => setToggle(false)}>
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </motion.div>
         )}
       </div>

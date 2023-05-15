@@ -33,7 +33,7 @@
 .app__navbar-links {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 
   li {
@@ -70,5 +70,100 @@
         background: var(--secondary-color);
       }
     }
+  }
+
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
+
+// Mobile Responsiveness on Navigation Bar
+.app__navbar-menu {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background: var(--gray-color);
+
+  svg {
+    width: 70%;
+    height: 70%;
+    color: var(--gray-color);
+  }
+
+  div {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+
+    padding: 16px;
+
+    width: 80%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+
+    background: url("../../assets/bgWhite.png");
+    background-color: var(--white-color);
+    background-size: cover;
+    background-repeat: repeat-x;
+
+    box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
+
+    svg {
+      width: 35px;
+      height: 35px;
+      color: var(--secondary-color);
+      margin: 8px 16px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      list-style: none;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+
+      li {
+        margin: 16px;
+      }
+
+      a {
+        color: var(--gray-color);
+        text-decoration: none;
+
+        font-size: 16px;
+        text-transform: capitalize;
+        font-weight: 500;
+
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: var(--secondary-color);
+        }
+      }
+    }
+
+    @media screen and (min-width: 900px) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    display: none;
   }
 }
