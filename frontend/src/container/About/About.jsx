@@ -1,38 +1,25 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { client, urlFor } from "../../client";
 import { images } from "../../constants";
 import "./About.scss";
+
 const About = () => {
-  const abouts = [
-    {
-      title: "Web Development",
-      description: "I am a good web developer.",
-      imageurl: images.about01,
-    },
-    {
-      title: "Web Design",
-      description: "I am a good web developer.",
-      imageurl: images.about02,
-    },
-    {
-      title: "UI/UX",
-      description: "I am a good web developer.",
-      imageurl: images.about03,
-    },
-    {
-      title: "Web Animation",
-      description: "I am a good web developer.",
-      imageurl: images.about04,
-    },
-  ];
+  const [abouts, setAbouts] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "about"]';
+    client.fetch(query).then((data) => {
+      setAbouts(data);
+    });
+  }, []);
+
   return (
     <>
       <h2 className="head-text">
-        I know that
-        <span> Good Design</span>
+        I know that<span> Good Apps</span>
         <br />
-        means
-        <span> Good Business</span>
+        means<span> Good Business</span>
       </h2>
       <div className="app__profiles">
         {abouts.map((about, i) => (
@@ -43,7 +30,7 @@ const About = () => {
             className="app__profile-item"
             key={about.title + i}
           >
-            <img src={about.imageurl} alt={about.title} />
+            <img src={urlFor(about.imageurl)} alt={about.title} />
             <h2 className="bold-text" style={{ marginTop: 20 }}>
               {about.title}
             </h2>
