@@ -29,10 +29,10 @@ const About = () => {
     <>
       <h2 className="head-text">
         I know that
-        <span>good design</span>
+        <span> Good Design</span>
         <br />
         means
-        <span>good business</span>
+        <span> Good Business</span>
       </h2>
       <div className="app__profiles">
         {abouts.map((about, i) => (
