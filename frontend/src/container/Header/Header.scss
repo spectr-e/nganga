@@ -19,7 +19,7 @@
   height: 100%;
   flex-direction: row;
 
-  padding: 64px 32px 0;
+  padding: 96px 32px 0;
 
   @media screen and (min-width: 2000px) {
     padding-top: 128px;
@@ -56,7 +56,7 @@
   .badge-cmp,
   .tag-cmp {
     padding: 16px 32px;
-    border: var(--white-color);
+    background: var(--white-color);
     border-radius: 16px;
     flex-direction: row;
     width: auto;

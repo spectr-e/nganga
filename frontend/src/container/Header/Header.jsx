@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { images } from "../../constants";
+import { AppWrap } from "../../wrapper";
 import "./Header.scss";
 
 const Header = () => {
@@ -14,7 +15,7 @@ const Header = () => {
     },
   };
   return (
-    <div id="home" className="app__header app__flex">
+    <div className="app__header app__flex">
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
@@ -29,10 +30,8 @@ const Header = () => {
             </div>
           </div>
           <div className="tag-cmp app__flex">
-            <p className="p-text">Software Engineer</p>
-            <p className="p-text">Frontend Developer</p>
-            <p className="p-text">Backend Developer</p>
-            <p className="p-text">UI/UX Designer</p>
+            <p className="p-text">Frontend Engineer</p>
+            <p className="p-text">Backend Engineer</p>
           </div>
         </div>
       </motion.div>
@@ -68,4 +67,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default AppWrap(Header, "home");
