@@ -19,7 +19,9 @@ const Work = () => {
     });
   }, []);
 
-  const handleFilter = (work) => setActiveFilter(work);
+  const handleFilter = (work) => {
+    setActiveFilter(work);
+  };
 
   return (
     <>
@@ -28,7 +30,7 @@ const Work = () => {
       </h2>
       {/* Section Tabs */}
       <div className="app__work-filter">
-        {["UI/UX", "Web App", "Mobile App", "React JS", "All"].map(
+        {["All", "UI/UX", "Web App", "Mobile App", "React JS"].map(
           (work, index) => (
             <div
               key={index}
