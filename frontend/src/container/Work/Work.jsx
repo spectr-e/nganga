@@ -21,6 +21,15 @@ const Work = () => {
 
   const handleFilter = (work) => {
     setActiveFilter(work);
+    setAnimateCard([{ y: 100, opacity: 0 }]);
+    setTimeout(() => {
+      setAnimateCard([{ y: 0, opacity: 1 }]);
+      if (work === "All") {
+        setFilterWorks(works);
+      } else {
+        setFilterWorks(works.filter((work) => work.tags.includes(work)));
+      }
+    }, 500);
   };
 
   return (
