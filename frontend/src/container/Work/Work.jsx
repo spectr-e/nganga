@@ -19,7 +19,7 @@ const Work = () => {
     });
   }, []);
 
-  const handleFilter = () => {};
+  const handleFilter = (work) => setActiveFilter(work);
 
   return (
     <>
@@ -52,7 +52,7 @@ const Work = () => {
         {filterWorks.map((work, index) => (
           <div key={index} className="app__work-item app__flex">
             <div className="app__work-img app__flex">
-              <img src={urlFor(works.imageUrl)} alt={works.name} />
+              <img src={urlFor(work.imageUrl)} alt={work.name} />
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
                 transition={{
@@ -62,7 +62,8 @@ const Work = () => {
                 }}
                 className="app__work-hover app__flex"
               >
-                <a href={works.projectLink} target="_blank" rel="noreferrer">
+                {/* Add Links to Work Projects while on hover */}
+                <a href={work.projectLink} target="_blank" rel="noreferrer">
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.9] }}
@@ -74,7 +75,7 @@ const Work = () => {
                     <AiFillEye />
                   </motion.div>
                 </a>
-                <a href={works.codeLink} target="_blank" rel="noreferrer">
+                <a href={work.codeLink} target="_blank" rel="noreferrer">
                   <motion.div
                     whileInView={{ scale: [0, 1] }}
                     whileHover={{ scale: [1, 0.9] }}
@@ -88,14 +89,14 @@ const Work = () => {
                 </a>
               </motion.div>
             </div>
-
+            {/* Add Title & Description */}
             <div className="app__work-content app__flex">
-              <h4 className="bold-text">{works.title}</h4>
+              <h4 className="bold-text">{work.title}</h4>
               <p className="p-text" style={{ marginTop: 10 }}>
-                {works.description}
+                {work.description}
               </p>
               <div className="app__work-tag app__flex">
-                <p className="p-text">{works.tags[0]}</p>
+                <p className="p-text">{work.tags[0]}</p>
               </div>
             </div>
           </div>
