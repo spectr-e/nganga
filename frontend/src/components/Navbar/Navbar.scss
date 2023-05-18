@@ -115,10 +115,10 @@
     background: url("../../assets/bgWhite.png");
     // background: rgba(234, 234, 234, 0.25);
     backdrop-filter: blur(4px);
-    // -webkit-backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     background-color: rgba(255, 255, 255, 0.947);
     background-size: cover;
-    background-repeat: repeat-x;
+    background-repeat: repeat;
 
     box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
 
