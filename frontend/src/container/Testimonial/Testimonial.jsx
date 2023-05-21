@@ -71,7 +71,7 @@ const Testimonial = () => {
           </div>
         </>
       )}
-      <div className="app__testimonials-brands app__flex">
+      <div className="app__testimonial-brands app__flex">
         {brands.map((brand, index) => (
           <motion.div
             transition={{ duration: 0.5, type: "tween" }}
