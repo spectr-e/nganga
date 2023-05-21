@@ -28,12 +28,16 @@ const Testimonial = () => {
   }, []);
 
   const test = testimonials[currentIndex];
+  console.log(testimonials);
   return (
     <>
       {testimonials.length && (
         <>
           <div className="app__testimonial app__flex">
-            <img src={urlFor(test.imageUrl)} alt="testimonials" />
+            <img
+              src={urlFor(testimonials[currentIndex].imageurl).url()}
+              alt="testimonials"
+            />
             <div className="app__testimonial-content">
               <p className="p-text">{test.feedback}</p>
             </div>
@@ -79,7 +83,7 @@ const Testimonial = () => {
             className="app"
             key={index}
           >
-            <img src={urlFor(brand.imageUrl)} alt={brand.name} />
+            <img src={urlFor(brand.imageurl).url()} alt={brand.name} />
           </motion.div>
         ))}
       </div>
