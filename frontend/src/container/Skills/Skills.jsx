@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import ReactTooltip from "react-tooltip";
 import { client, urlFor } from "../../client";
 import { AppWrap, MotionWrap } from "../../wrapper";
