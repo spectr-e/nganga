@@ -53,7 +53,7 @@
 }
 
 .app__footer-cards .app__footer-card:last-child {
-  background-color: #f2f7fb;
+  background-color: #f9f9fa;
 }
 
 .app__footer-form {
@@ -66,7 +66,6 @@
     margin: 12px 0;
     border-radius: 8px;
     cursor: pointer;
-    background-color: var(--primary-color);
 
     transition: all 0.3s ease-in-out;
 
@@ -76,19 +75,22 @@
       padding: 16px;
       border: none;
       border-radius: 8px;
-      background-color: var(--primary-color);
+      margin-left: 4px;
+      background-color: #fff;
 
       font-family: var(--font-base);
       color: var(--secondary-color);
       outline: none;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        box-shadow: 0 0 0 2px #fff;
+      }
     }
 
     textarea {
       height: 160px;
-    }
-
-    &:hover {
-      box-shadow: 0 0 0 2px var(--primary-color);
+      resize: none;
     }
   }
 

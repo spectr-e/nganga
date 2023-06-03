@@ -68,7 +68,7 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Your Email"
-              name="eamil"
+              name="email"
               value={email}
               onChange={handleChange}
               className="p-text"
@@ -100,5 +100,5 @@ const Footer = () => {
 export default AppWrap(
   MotionWrap(Footer, "app__footer"),
   "contact",
-  "app__whitebg"
+  "app__graybg"
 );

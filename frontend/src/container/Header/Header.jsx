@@ -57,7 +57,7 @@ const Header = () => {
         transition={scaleVariants.transition}
         className="app__header-circles"
       >
-        {[images.flutter, images.redux, images.sass].map((circle, i) => (
+        {[images.javascript, images.next, images.ruby].map((circle, i) => (
           <div className="circle-cmp app__flex" key={i}>
             <img src={circle} alt="circle" />
           </div>
